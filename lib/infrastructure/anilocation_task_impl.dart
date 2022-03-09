@@ -151,16 +151,17 @@ class AnilocationTaskImpl extends IAnilocationTask
     if (_useRotation) {
       double angle;
 
-      final angleRad = SphericalUtil.computeAngleBetween(
-          wrapper.locationTween.begin, wrapper.locationTween.end);
-      final sinAngle = sin(angleRad);
+      // final angleRad = SphericalUtil.computeAngleBetween(
+      //     wrapper.locationTween.begin, wrapper.locationTween.end);
+      // final sinAngle = sin(angleRad);
+      //
+      // if (sinAngle < 1E-6 /*|| description.angleThreshold*/) {
+      //   angle = _bearingTween.end;
+      // } else {
+      //   angle = wrapper.locationTween.bearing;
+      // }
 
-      if (sinAngle < 1E-6 /*|| description.angleThreshold*/) {
-        angle = _bearingTween.end;
-      } else {
-        angle = wrapper.locationTween.bearing;
-      }
-
+      angle = from.bearing;
       _bearingTween.swap(angle);
     }
   }
