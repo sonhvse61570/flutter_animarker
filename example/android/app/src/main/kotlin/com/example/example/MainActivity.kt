@@ -1,4 +1,4 @@
-package com.example.flutter_map_marker_animation_example
+package com.example.example
 
 import io.flutter.embedding.android.FlutterActivity
 
